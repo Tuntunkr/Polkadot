@@ -155,255 +155,29 @@ function App() {
 
               <Row>
               {/* 1st col PARITY TECHNOLOGY*/}
-                <Col md={12}>
-                  <div className="eventCard">
-                    <span className="tag">Online</span>
-                    <div className="displayFlex">
-                      <div className="eventTitle">Parity Technologies</div>
-                      <div className="eventDate">
-                        {" "}
-                        <img src={calenderIcon} /> 2 Oct - 7 Oct
-                      </div>
-                    </div>
-                    <div className="eventDescription">
-                      Offers interpretation to International sign language or
-                      closed captions.
-                    </div>
-                    <div className="twitterUsserName">
-                      <img src={twitterLogo} />&nbsp;@ParityTech
-                    <span className="codeConduct"><Nav.Link href="/features">Code Of Conduct</Nav.Link></span></div>
-                    
-                    <button className="hashTag">#Parity Technologies</button>
-                  </div>
-                </Col>
-                {/* 2nd col POLKADOT */}
-                <Col md={12}>
-                  <div className="eventCard">
-                    <span className="tag">Online</span>
-                    <div className="displayFlex">
-                      <div className="eventTitle">Polkadot</div>
-                      <div className="eventDate">
+              {cards.map((item,index)=>{
+                      return  <Col md={12}>
+                      <div className="eventCard">
+                        <span className="tag">Online</span>
+                        <div className="displayFlex">
+                          <div className="eventTitle">Parity Technologies</div>
+                          <div className="eventDate">
+                            {" "}
+                            <img src={calenderIcon} /> 2 Oct - 7 Oct
+                          </div>
+                        </div>
+                        <div className="eventDescription">
+                          Offers interpretation to International sign language or
+                          closed captions.
+                        </div>
+                        <div className="twitterUsserName">
+                          <img src={twitterLogo} />&nbsp;@ParityTech
+                        <span className="codeConduct"><Nav.Link href="/features">Code Of Conduct</Nav.Link></span></div>
                         
-                        <img src={calenderIcon} /> 2 Nov - 7 Nov
+                        <button className="hashTag">#Parity Technologies</button>
                       </div>
-                    </div>
-                    <div className="eventDescription">
-                      Offers interpretation to International sign language or
-                      closed captions.
-                    </div>
-                    <div className="twitterUsserName">
-                      <img src={twitterLogo} />&nbsp;@Polkadot
-                    <span className="codeConduct">Code Of Conduct</span></div>
-                    
-                    <button className="hashTag">#Polkadot</button>
-                  </div>
-                </Col>
-                {/* 3rd Rust Network */}
-                <Col md={12}>
-                  <div className="eventCard">
-                    <span className="tag">Online</span>
-                    <div className="displayFlex">
-                      <div className="eventTitle">Rust Network</div>
-                      <div className="eventDate">
-                        
-                        <img src={calenderIcon} /> 3 Nov - 5 Nov
-                      </div>
-                    </div>
-                    <div className="eventDescription">
-                      Offers interpretation to International sign language or
-                      closed captions.
-                    </div>
-                    <div className="twitterUsserName">
-                      <img src={twitterLogo} />&nbsp;@CrustNetwork
-                    <span className="codeConduct">Code Of Conduct</span></div>
-                    
-                    <button className="hashTag">#Rust Network</button>
-                  </div>
-                </Col>
-                  {/* 4th Col ACALA  */}
-
-                  <Col md={12}>
-                  <div className="eventCard">
-                    <span className="tag">Online</span>
-                    <div className="displayFlex">
-                      <div className="eventTitle">Acala - DeFi Hub of Polkadot</div>
-                      <div className="eventDate">
-                        
-                        <img src={calenderIcon} /> 3 Nov - 5 Nov
-                      </div>
-                    </div>
-                    <div className="eventDescription">
-                      Offers interpretation to International sign language or
-                      closed captions.
-                    </div>
-                    <div className="twitterUsserName">
-                      <img src={twitterLogo} />&nbsp;@AcalaNetwork
-                    <span className="codeConduct">Code Of Conduct</span></div>
-                    
-                    <button className="hashTag">#Acala</button>
-                  </div>
-                </Col>
-                {/* 5th Col  */}
-                <Col md={12}>
-                  <div className="eventCard">
-                    <span className="tag">Online</span>
-                    <div className="displayFlex">
-                      <div className="eventTitle">Moonriver Network</div>
-                      <div className="eventDate">
-                        
-                        <img src={calenderIcon} /> 5 Nov - 8 Nov
-                      </div>
-                    </div>
-                    <div className="eventDescription">
-                      Offers interpretation to International sign language or
-                      closed captions.
-                    </div>
-                    <div className="twitterUsserName">
-                      <img src={twitterLogo} />&nbsp;@MoonriverNW
-                    <span className="codeConduct">Code Of Conduct</span></div>
-                    
-                    <button className="hashTag">#Moonriver Network</button>
-                  </div>
-                </Col>
-                  {/* 6th Col */}
-
-                  {/* 5th Col  */}
-                <Col md={12}>
-                  <div className="eventCard">
-                    <span className="tag">Online</span>
-                    <div className="displayFlex">
-                      <div className="eventTitle">Karura</div>
-                      <div className="eventDate">
-                        
-                        <img src={calenderIcon} /> 10 Nov - 12 Nov
-                      </div>
-                    </div>
-                    <div className="eventDescription">
-                      Offers interpretation to International sign language or
-                      closed captions.
-                    </div>
-                    <div className="twitterUsserName">
-                      <img src={twitterLogo} />&nbsp;@KaruraNetwork
-                    <span className="codeConduct">Code Of Conduct</span></div>
-                    
-                    <button className="hashTag">#Karura</button>
-                  </div>
-                </Col>
-                {/* 7th Col  */}
-                <Col md={12}>
-                  <div className="eventCard">
-                    <span className="tag">Online</span>
-                    <div className="displayFlex">
-                      <div className="eventTitle">Anyswap</div>
-                      <div className="eventDate">
-                        
-                        <img src={calenderIcon} /> 10 Nov - 12 Nov
-                      </div>
-                    </div>
-                    <div className="eventDescription">
-                      Offers interpretation to International sign language or
-                      closed captions.
-                    </div>
-                    <div className="twitterUsserName">
-                      <img src={twitterLogo} />&nbsp;@AnyswapNetwork
-                    <span className="codeConduct">Code Of Conduct</span></div>
-                    
-                    <button className="hashTag">#Anyswap</button>
-                  </div>
-                </Col>
-                {/* 8th Col */}
-
-                <Col md={12}>
-                  <div className="eventCard">
-                    <span className="tag">Online</span>
-                    <div className="displayFlex">
-                      <div className="eventTitle">Shiden Network</div>
-                      <div className="eventDate">
-                        
-                        <img src={calenderIcon} /> 12 Nov - 14 Nov
-                      </div>
-                    </div>
-                    <div className="eventDescription">
-                      Offers interpretation to International sign language or
-                      closed captions.
-                    </div>
-                    <div className="twitterUsserName">
-                      <img src={twitterLogo} />&nbsp;@shidenNetwork
-                    <span className="codeConduct">Code Of Conduct</span></div>
-                    
-                    <button className="hashTag">#Shiden Network</button>
-                  </div>
-                </Col>
-                  {/* 9th Col */}
-
-                  <Col md={12}>
-                  <div className="eventCard">
-                    <span className="tag">Online</span>
-                    <div className="displayFlex">
-                      <div className="eventTitle">Binance Coin (BNB)</div>
-                      <div className="eventDate">
-                        
-                        <img src={calenderIcon} /> 15 Nov - 16 Nov
-                      </div>
-                    </div>
-                    <div className="eventDescription">
-                      Offers interpretation to International sign language or
-                      closed captions.
-                    </div>
-                    <div className="twitterUsserName">
-                      <img src={twitterLogo} />&nbsp;@binance
-                    <span className="codeConduct">Code Of Conduct</span></div>
-                    
-                    <button className="hashTag">#Binance Coin</button>
-                  </div>
-                </Col>
-
-                    {/* 10th Col */}
-                    <Col md={12}>
-                  <div className="eventCard">
-                    <span className="tag">Online</span>
-                    <div className="displayFlex">
-                      <div className="eventTitle">Aave (AAVE)</div>
-                      <div className="eventDate">
-                        
-                        <img src={calenderIcon} /> 18 Nov - 20 Nov
-                      </div>
-                    </div>
-                    <div className="eventDescription">
-                      Offers interpretation to International sign language or
-                      closed captions.
-                    </div>
-                    <div className="twitterUsserName">
-                      <img src={twitterLogo} />&nbsp;@AaveAave
-                    <span className="codeConduct">Code Of Conduct</span></div>
-                    
-                    <button className="hashTag">#Aave</button>
-                  </div>
-                </Col>
-                  {/* 11th Col */}
-                  <Col md={12}>
-                  <div className="eventCard">
-                    <span className="tag">Online</span>
-                    <div className="displayFlex">
-                      <div className="eventTitle">kusama.com</div>
-                      <div className="eventDate">
-                        
-                        <img src={calenderIcon} /> 18 Nov - 20 Nov
-                      </div>
-                    </div>
-                    <div className="eventDescription">
-                      Offers interpretation to International sign language or
-                      closed captions.
-                    </div>
-                    <div className="twitterUsserName">
-                      <img src={twitterLogo} />&nbsp;@kusamaNetwork
-                    <span className="codeConduct">Code Of Conduct</span></div>
-                    
-                    <button className="hashTag">#kusama</button>
-                  </div>
-                </Col>
-
-
+                    </Col>
+                    })}
               </Row>
             </Col>
           </Row>
