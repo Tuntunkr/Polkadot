@@ -160,21 +160,20 @@ function App() {
                       <div className="eventCard">
                         <span className="tag">Online</span>
                         <div className="displayFlex">
-                          <div className="eventTitle">Parity Technologies</div>
+                          <div className="eventTitle">{item.eventTitle}</div>
                           <div className="eventDate">
                             {" "}
-                            <img src={calenderIcon} /> 2 Oct - 7 Oct
+                            <img src={calenderIcon} /> {item.eventDate}
                           </div>
                         </div>
                         <div className="eventDescription">
-                          Offers interpretation to International sign language or
-                          closed captions.
+                        {item.eventDescription}
                         </div>
                         <div className="twitterUsserName">
                           <img src={twitterLogo} />&nbsp;@ParityTech
-                        <span className="codeConduct"><Nav.Link href="/features">Code Of Conduct</Nav.Link></span></div>
+                        <span className="codeConduct"><Nav.Link href="/features">{item.codeConduct}</Nav.Link></span></div>
                         
-                        <button className="hashTag">#Parity Technologies</button>
+                        <button className="hashTag">{item.hashTag}</button>
                       </div>
                     </Col>
                     })}
