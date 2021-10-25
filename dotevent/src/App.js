@@ -17,17 +17,20 @@ import { useState,useEffect  } from 'react'
 import axios from 'axios';
 function App() {
   const [locations, setlocations] = useState([]);
+  const [names, setnames] = useState([]);
+  const [cards, setcards] = useState([]);
   useEffect(() => {
     axios.get('http://localhost:3200/locations')
   .then(function (response) {
-    //setlocations(response.data.data);
-  // const locations = response.data.data;
-   console.log(response.data.data)
    setlocations(response.data.data)
   })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
+  axios.get('http://localhost:3200/names')
+  .then(function (response) {
+    setnames(response.data.data)
+  })
+  axios.get('http://localhost:3200/cards')
+  .then(function (response) {
+    setcards(response.data.data)
   })
   },[]); 
   return (
@@ -116,13 +119,11 @@ function App() {
                     <span>
                       <img src={searchIcon} />
                     </span>
-                    <div className="cityName">
-                    Polkadot <span className="cityCount">2</span>
-                  </div>
-                  &nbsp;
-                  <div className="cityName">
-                    Kusama <span className="cityCount">2</span>
-                  </div>
+                    {names.map((item,index)=>{
+                      return <div className="cityName">
+                      {item.name} <span className="cityCount">1</span>
+                    </div>
+                    })}
                   </div>
                 </div>
               </div>
