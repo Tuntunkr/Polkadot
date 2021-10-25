@@ -13,9 +13,23 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
 import "./App.css";
 import Footer from "./Footer";
-
-
+import { useState,useEffect  } from 'react' 
+import axios from 'axios';
 function App() {
+  const [locations, setlocations] = useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:3200/locations')
+  .then(function (response) {
+    //setlocations(response.data.data);
+  // const locations = response.data.data;
+   console.log(response.data.data)
+   setlocations(response.data.data)
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  },[]); 
   return (
     <div className="App">
       <header className="App-header">
@@ -86,9 +100,12 @@ function App() {
                       <img src={searchIcon} />
                     </span>
                   </div>
-                  <div className="cityName">
-                    London <span className="cityCount">2</span>
-                  </div>
+                  {locations.map((item,index)=>{
+                      return <div className="cityName">     
+                      {item.name} <span className="cityCount">1</span>
+                    </div>
+                    })}
+                  
                 </div>
 
                 <div className="filterName">
